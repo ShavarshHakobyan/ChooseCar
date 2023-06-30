@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Quiz 🕹️</title>
+</head>
+
+<body>
+    <section id="card" class="card">
+        <section class="infobar">
+            <div class="score">Ճշգրտություն: <span id="alertaccuracy"></span></div>
+        </section>
+        <section class="infobar">
+            <div class="score"> Միավոր: <span id="score">0</span></div>
+            <div id="time" class="time"></div>
+        </section>
+        <div class="container">
+            <section class="section">
+                <img src="images/ford.jpg" alt="car" class="car" id="car">
+            </section>
+            <div class="border"></div>
+            <section class="section" id="optionhalf">
+                <div class="option">
+                    <input type="radio" value="" name="option" id="option1input" class="optionradio">
+                    <label for="option1input" class="label" id="option1label">Ford</label>
+                </div>
+                <div class="option">
+                    <input type="radio" value="" name="option" id="option2input" class="optionradio">
+                    <label for="option2input" class="label" id="option2label">Chevrolet</label>
+                </div>
+                <div class="option">
+                    <input type="radio" value="" name="option" id="option3input" class="optionradio">
+                    <label for="option3input" class="label" id="option3label">Infiniti</label>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
