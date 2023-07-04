@@ -1,19 +1,3 @@
-const Images = [
-    {
-        "car": "images/ford.jpg",
-        "name": "Ford"
-    },
-    {
-        "car": "images/audi.jpg",
-        "name": "Audi"
-    },
-];
-function randomImage() {
-    getElementById("car");
-
-}
-
-
 let seconds = 10;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
@@ -21,11 +5,22 @@ let incorrectAnswer = 0;
 function getElement(id) {
     return document.getElementById(id);
 }
+function getRandomImages() {
+   return  images [Math.floor(Math.random(images.length-1)*10)]
+}
+function main (){
+    coun = getRandomImages();
+    getElement("car").src = coun.car;
+}
+function getRandomName() {
+    
+}
 
 function timer() {
     setTimeout(finish, seconds * 1000);
     getElement("time").innerHTML = seconds;
     let countdown = setInterval(function () {
+        main();
         seconds--;
         getElement("time").textContent = seconds;
         if (seconds <= 0) clearInterval(countdown);
