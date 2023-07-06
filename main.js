@@ -1,3 +1,4 @@
+let correct;
 let seconds = 10;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
@@ -6,15 +7,28 @@ function getElement(id) {
     return document.getElementById(id);
 }
 function getRandomImages() {
-   return  images [Math.floor(Math.random(images.length-1)*10)]
+    return images[Math.floor(Math.random(images.length - 1) * 10)]
 }
-function main (){
-    coun = getRandomImages();
-    getElement("car").src = coun.car;
+function main() {
+
+    let options = [];
+    const maxOptions = 3;
+    while (options.length < maxOptions) {
+        let coun = getRandomImages()
+        if (options.indexOf(coun) === -1) {
+            options.push(coun);
+        }
+    }
+    for (let i = 0; i < options.length; i++) {
+        getElement(`options${i + 1}label`).innerHTML = options[i].name;
+        getElement(`options${i + 1}input`).value = options[i].name;
+        getElement(`options${i + 1}input`).checked = false;
+
+    }
+    correct = options[Math.round(Math.random() * (options.length - 1))];
+    getElement("car").src = correct.car
 }
-function getRandomName() {
-    
-}
+
 
 function timer() {
     setTimeout(finish, seconds * 1000);
@@ -35,9 +49,13 @@ function check() {
         //alert("unecaq sxal")
         return;
     }
-    correctAnswer++;
-    getElement('score').innerHTML = correctAnswer;
-    clearInterval(checkInterval);
+    if (input === correct.name) {
+        correctAnswer++;
+        getElement('score').innerHTML = correctAnswer;
+    } else {
+        incorrectAnswer++;
+    }
+    main()
 }
 function finish() {
     clearInterval(checkInterval);
@@ -45,5 +63,6 @@ function finish() {
     getElement("alertaccuracy").innerHTML = `${parcentage}%`;
 }
 let checkInterval = setInterval(check, 50);
+main()
 timer();
 
