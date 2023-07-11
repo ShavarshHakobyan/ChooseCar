@@ -5,6 +5,10 @@ const images = [
         "name": "Gmc"
     },
     {
+        "car": "images/1.jpg",
+        "name": "Rolls Royce"
+    },
+    {
         "car": "images/honda.jpg",
         "name": "Honda"
     },
@@ -37,6 +41,11 @@ const images = [
         "name": "Maserati"
     },
     {
+        "car": "images/Astra_G_Sufenheck.jpg",
+        "name": "Opel"
+    },
+
+    {
         "car": "images/mazda.jpg",
         "name": "Mazda"
     },
@@ -47,6 +56,10 @@ const images = [
     {
         "car": "images/mercedes1.jpg",
         "name": "Mercedes"
+    },
+    {
+        "car": "images/su_2641.jpg",
+        "name": "Suzuki"
     },
     {
         "car": "images/Mitsubishi.jpg",
@@ -100,5 +113,20 @@ const images = [
         "car": "images/toyota1.jpg",
         "name": "Toyota"
     },
+    {
+        "car": "images/images.jpg",
+        "name": "BYD"
+    },
+    {
+        "car": "images/download.jpg",
+        "name": "Dodge"
+    },
+
+    {
+        "car": "images/2019_Tesla_Model_3_Performance_AWD_Front.jpg",
+        "name": "Tesla"
+    },
+
+
 ];
 

@@ -10,14 +10,11 @@
 </head>
 
 <body>
-    <section id="card" class="card">
-        <section class="infobar">
-            <div class="score">Ճշգրտություն: <span id="alertaccuracy"></span></div>
-        </section>
-        <section class="infobar">
-            <div class="score"> Միավոր: <span id="score">0</span></div>
-            <div id="time" class="time"></div>
-        </section>
+        <section class="card" id="card">
+            <section class="infobar">
+                <div class="score">Միավոր: <span id="score">0</span></div>
+                <div class="time" id="time"></div>
+            </section>
         <div class="container">
             <section class="section">
                 <img src="" alt="car" class="car" id="car">
@@ -39,6 +36,15 @@
             </section>
         </div>
     </section>
+
+    <section id="alert" class="card">
+        <div class="alerttext">Միավոր: <span id="alertscore"></span></div>
+        <div class="alerttext">Ճշգրտություն: <span id="alertaccuracy"></span></div>
+        <br>
+        <button onclick="refresh()" class="button">Վերսկսել</button>
+    </section>
+
+
     <script src="images.js"></script>
     <script src="main.js"></script>
 </body>

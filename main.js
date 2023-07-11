@@ -1,5 +1,5 @@
 let correct;
-let seconds = 20;
+let seconds = 30;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
 
@@ -57,14 +57,22 @@ function check() {
 }
 function finish() {
     clearInterval(checkInterval);
+    getElement("alert").style.display = "block";
+    getElement("card").style.display = "none";
+    getElement("alertscore").innerHTML = correctAnswer;
     let percentage = Math.round(correctAnswer / (correctAnswer + incorrectAnswer) * 100);
-    let resultForAnswers;
     if (isNaN(percentage)) {
         percentage = 'Փորձիր կրկին';
-    } 
-    getElement("alertaccuracy").innerHTML = ` ${percentage}%`;
+        getElement("alertaccuracy").innerHTML = ` ${percentage}`;
+    } else{
+          getElement("alertaccuracy").innerHTML = ` ${percentage}%`;
+    }
+  
 }
 
+function refresh(){
+    location = location
+}
 let checkInterval = setInterval(check, 50);
 main();
 timer();
