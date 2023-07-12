@@ -1,5 +1,5 @@
 let correct;
-let seconds = 30;
+let seconds = 40;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
 
@@ -62,7 +62,7 @@ function finish() {
     getElement("alertscore").innerHTML = correctAnswer;
     let percentage = Math.round(correctAnswer / (correctAnswer + incorrectAnswer) * 100);
     if (isNaN(percentage)) {
-        percentage = 'Փորձիր կրկին';
+        percentage = 'Գնա սովորի ոչմիբան չգիդես  😎 ';
         getElement("alertaccuracy").innerHTML = ` ${percentage}`;
     } else{
           getElement("alertaccuracy").innerHTML = ` ${percentage}%`;

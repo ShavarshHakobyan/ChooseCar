@@ -54,8 +54,17 @@ const images = [
         "name": "Mercedes"
     },
     {
+        "car": "images/reno.jpg",
+        "name": "Renault"
+    },
+
+    {
         "car": "images/mercedes1.jpg",
         "name": "Mercedes"
+    },
+    {
+        "car": "images/ca-times.brightspotcdn.jpg",
+        "name": "Ford"
     },
     {
         "car": "images/su_2641.jpg",
@@ -86,6 +95,10 @@ const images = [
         "name": "Audi"
     },
     {
+        "car": "images/MonteCarlo.jpg",
+        "name": "Skoda"
+    },
+    {
         "car": "images/mini.jpg",
         "name": "Mini"
     },
@@ -96,6 +109,10 @@ const images = [
     {
         "car": "images/bmw.jpg",
         "name": "Bmw"
+    },
+    {
+        "car": "images/download-1.jpg",
+        "name": "Infiniti"
     },
     {
         "car": "images/cadillac.jpg",
